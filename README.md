@@ -28,3 +28,19 @@ $ docker build -t 1000kit/h2 .
 
 or simply use the `build.sh` script
 
+## run
+
+### docker
+~~~~
+$ docker run -it 1000kit/h2
+~~~~
+Alternative using persistent data:
+~~~~
+$ docker run -v <host_local_datadir>:/opt/h2-data -it 1000kit/h2
+~~~~
+### docker-compose
+Download `docker-compose.yml` from github. If you need persistence uncomment the volume settings in `docker-compose.yml` file. 
+
+~~~~
+$ docker-compose up 
+~~~~
