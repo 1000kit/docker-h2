@@ -16,9 +16,9 @@ ENV H2DIR=/opt/h2 \
 
 ADD install/h2-start.sh /tmp/  
 
-RUN mkdir -p ${H2CONF} \ 
+RUN mkdir -p ${H2CONF} ${H2DATA}/data \ 
     && groupadd -r h2 -g 2000 \
-    && useradd -u 2000 -r -g h2 -m -d ${H2DATA} -s /sbin/nologin -c "h2 user" h2 \
+    && useradd -u 2000 -r -g h2 -m -d ${H2DATA}/data -s /sbin/nologin -c "h2 user" h2 \
     
     && curl -L http://www.h2database.com/h2-2016-10-31.zip -o /tmp/h2.zip \
     && unzip -q /tmp/h2.zip -d /opt/ \
@@ -31,7 +31,6 @@ RUN mkdir -p ${H2CONF} \
     
 USER h2  
 
-   
       
 WORKDIR ${H2DIR}
 

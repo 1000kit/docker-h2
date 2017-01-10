@@ -1,6 +1,6 @@
 version: '2'
 services:
-  artifactory:
+  h2:
     container_name: 'h2'
     hostname: 'h2'
     image: 1000kit/h2
