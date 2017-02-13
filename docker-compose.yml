@@ -7,7 +7,8 @@ services:
     ports:
       - "8181:8181"
       - "1521:1521"
-#    volumes:
-#      - /opt/volumes/h2/:/opt/h2-data
-    
+    volumes:
+      - h2-data:/opt/h2-data
+volumes:
+     h2-data:
 #END

@@ -10,17 +10,19 @@ LABEL Vendor="1000kit" \
 USER root
 
 ENV H2DIR=/opt/h2 \
-    H2VERS=1.4.193 \
+    H2VERS=1.3.176 \
     H2DATA=/opt/h2-data \
     H2CONF=/opt/h2-conf
 
 ADD install/h2-start.sh /tmp/  
 
+#   curl -L http://www.h2database.com/h2-2016-10-31.zip -o /tmp/h2.zip \
 RUN mkdir -p ${H2CONF} ${H2DATA}/data \ 
     && groupadd -r h2 -g 2000 \
     && useradd -u 2000 -r -g h2 -m -d ${H2DATA}/data -s /sbin/nologin -c "h2 user" h2 \
     
-    && curl -L http://www.h2database.com/h2-2016-10-31.zip -o /tmp/h2.zip \
+    && curl -L http://www.h2database.com/h2-2014-04-05.zip -o /tmp/h2.zip \
+
     && unzip -q /tmp/h2.zip -d /opt/ \
     && rm /tmp/h2.zip \
     
