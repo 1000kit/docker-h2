@@ -19,7 +19,7 @@ ADD install/h2-start.sh /tmp/
 #   curl -L http://www.h2database.com/h2-2016-10-31.zip -o /tmp/h2.zip \
 RUN mkdir -p ${H2CONF} ${H2DATA}/data \ 
     && groupadd -r h2 -g 2000 \
-    && useradd -u 2000 -r -g h2 -m -d ${H2DATA}/data -s /sbin/nologin -c "h2 user" h2 \
+    && useradd -l -u 2000 -r -g h2 -m -d ${H2DATA}/data -s /sbin/nologin -c "h2 user" h2 \
     
     && curl -L http://www.h2database.com/h2-2014-04-05.zip -o /tmp/h2.zip \
 
