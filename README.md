@@ -7,6 +7,8 @@ This repository contains `H2 Database` image from `www.h2database.com`
 
  Latest H2 DB version 1.4.193 (2016-10-31)
 
+ Works with JBoss EAP 7.1 and CP-12
+ 
 ### Availability
 
 The `Dockerfile` is available in the `master` branch and is built in the Docker HUB as `1000kit/h2:latest`.
