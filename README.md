@@ -5,7 +5,9 @@ This repository contains `H2 Database` image from `www.h2database.com`
 
 ### Installed versions:
 
- Latest H2 DB version 1.4.193 (2016-10-31)
+ Latest H2 DB version 1.3.176 (h2-2014-04-05.zip). 
+
+ Works with JBoss EAP 7.0
 
 ### Availability
 
